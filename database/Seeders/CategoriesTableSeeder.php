@@ -1,8 +1,8 @@
 <?php
 
-namespace database\Seeders;
+namespace database\seeders\CategoriesTableSeeder;
 
-use Illuminate\database\Seeders;
+use Illuminate\Database\Seeders;
 
 class CategoriesTableSeeder extends Seeder
 {
