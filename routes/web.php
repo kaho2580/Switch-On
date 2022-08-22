@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\AutoAddressController;
+use App\Http\Controllers\GoogleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,4 +20,5 @@ Route::get('/', function () {
 });
 
 Route::get('/posts', [PostController::class, 'index']);
-Route::view('/welcome', 'welcome');
+Route::get('/auto-complete-address', [AutoAddressController::class, 'index']);
+Route::get('/google-autocomplete', [GoogleController::class, 'index']);

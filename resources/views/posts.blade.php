@@ -7,15 +7,15 @@
         <body>
             <h1>ついに、スイッチを押すか...さぁ投稿しよう！</h1>
                 <form action="/views" method="POST">
-                    @csrf
                     <h2>何合炊く？</h2>
-                        <div class="select">
-                            <button id="category1" type="button">1合</button>
-                            <button id="category2" type="button">1.5合</button>
-                            <button id="category3" type="button">2合</button>
-                            <button id="category4" type="button">3合</button>
-                        </div>
-                        
+                                <select name="category_type">
+                                    <option id="category1" type="button">1合</option>
+                                    <option id="category2" type="button">1.5合</option>
+                                    <option id="category3" type="button">2合</option>
+                                    <option id="category4" type="button">3合</option>
+                                </select>
+                                
+                                
                             <h2>炊く炊飯器の写真を載せてくれ！！</h2>
                                 <div class="image_insert">
                                     <section class="form-container">
