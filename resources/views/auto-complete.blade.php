@@ -44,10 +44,11 @@
                 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
                 {{-- javascript code --}}
                 <script src="https://maps.google.com/maps/api/js?key={{config('app.key_API04')}}&libraries=places&callback=initAutocomplete" type="text/javascript"></script>
+                
             <script>
                 $(document).ready(function() {
-                $("#lat_area").addClass("d-none");
-                $("#long_area").addClass("d-none");
+                    $("#lat_area").addClass("d-none");
+                    $("#long_area").addClass("d-none");
                 });
             </script>
             
