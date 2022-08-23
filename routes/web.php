@@ -16,9 +16,20 @@ use App\Http\Controllers\GoogleController;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('Top');
 });
 
 Route::get('/posts', [PostController::class, 'index']);
 Route::get('/auto-complete-address', [AutoAddressController::class, 'index']);
 Route::get('/google-autocomplete', [GoogleController::class, 'index']);
+
+Auth::routes();
+
+Route::middleware('auth')->group(function () {
+    Route::get('/home', function () {
+        return view('home');
+    });
+    Route::get('/profile', function() {
+        return view('profile.index');
+    })->name('profile');
+});
