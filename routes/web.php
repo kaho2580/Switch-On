@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\AutoAddressController;
 use App\Http\Controllers\GoogleController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,12 +23,13 @@ Route::get('/', function () {
 Route::get('/posts', [PostController::class, 'index']);
 Route::get('/auto-complete-address', [AutoAddressController::class, 'index']);
 Route::get('/google-autocomplete', [GoogleController::class, 'index']);
+Route::post('/store',[PostController::class, 'store'])->name("store");
 
 Auth::routes();
 
 Route::middleware('auth')->group(function () {
     Route::get('/home', function () {
-        return view('home');
+        return view('Top');
     });
     Route::get('/profile', function() {
         return view('profile.index');
