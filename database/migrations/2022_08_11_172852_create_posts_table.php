@@ -17,6 +17,10 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->string('image', 100)->nullable();
             $table->string('comment')->nullable();
+            $table->timestamps();
+            $table->string('address');
+            $table->double('latitude');
+            $table->double('longitude');
         });
     }
 
