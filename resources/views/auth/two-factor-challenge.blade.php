@@ -51,7 +51,8 @@
                             <label for="recovery_code" class="col-md-4 col-form-label text-md-right">{{ __('Reocvery Code') }}</label>
 
                             <div class="col-md-6">
-                                <input id="recovery_code" type="recovery_code" class="form-control @error('recovery_code') is-invalid @enderror" name="recovery_code" required autocomplete="current-recovery_code">
+                                <input id="recovery_code" type="recovery_code" class="form-control @error('recovery_code') is-invalid @enderror" name="recovery_code" 
+                                    required autocomplete="current-recovery_code">
 
                                 @error('code')
                                     <span class="invalid-feedback" role="alert">
